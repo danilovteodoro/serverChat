@@ -1,0 +1,123 @@
+
+body{
+    background: #e5e5e5;
+    font: normal 13px Roboto,arial,sans-serif;
+    font-family: Roboto, arial, sans-serif;
+    color: #404040
+    
+}
+#novo{
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 25%;
+    padding: 2%;
+    background: #FFFFFF;
+    border-color: #d8d8d8;
+    
+    
+    
+   
+}
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+table td{
+    border-bottom: 1px;
+     border-left: 0px;
+     border-top: 0px;
+     border-right: 0px;
+    border-style: solid;
+    padding: 10px
+    
+}
+
+
+#display{
+    display: none;
+    width: 100%
+}
+
+#saida{
+    float: left;
+    height: 480px;
+    width: 70%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d8d8d8;
+    overflow: auto;
+    background: #FFFFFF
+}
+
+#nicks{
+    float:right;
+    height: 480px;
+    width: 25%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d8d8d8;
+    overflow: auto;
+    background: #FFFFFF
+    
+}
+
+#controlhes{
+    float:left;
+    width: 100%;
+    margin-top: 5%;
+    padding: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d8d8d8;
+    background: #FFFFFF
+    
+}
+
+#tblNiks{
+    width: 100%;
+    padding: 10px;
+    font-weight: bold
+        
+}
+
+#send{
+    margin-left: 150px;
+}
+
+.header{
+     border-bottom: 2px;
+     border-left: 0px;
+     border-top: 0px;
+     border-right: 0px;
+     border-style: solid;
+     border-color: #d8d8d8;
+     background: #FFFFFF;
+   
+     color: #262626;
+     width: 90%;
+     margin-left: 5%;
+       
+     
+    
+}
+
+
+.content{
+     width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    
+}
+
+
+
+/*!--style="border-width: 2px;border-style: solid;margin-top: 25%;padding: 2%"-->
+     style="display: none;width: 100%;"
+     float: left;height: 400px;width: 70%;border-width: 2px;border-style: solid;overflow: auto"
+
+style=" float: right;height: 400px;width: 20%;border-width: 2px;border-style: solid;overflow: auto"
+
+ style="float: left;border-width: 2px;border-style: solid;height: 40px;width: 100%; margin-top: 5%;padding: 5px"
+*/

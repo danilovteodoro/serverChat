@@ -1,0 +1,82 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div id="saida">
+        </div>
+        
+        <div>
+          <input type="text" id="entrada"/>
+          <input type="button" value="Enviar" onclick="enviar();"/><br>
+          <input type="button" value="Conectar" onclick="conectar();">
+          <input type="button" value="Desconectar" onclick="desconectar();">
+        </div>
+        
+        <script type="text/javascript">
+            var saida = document.getElementById('saida');
+            var entrada = document.getElementById('entrada');
+            var webSocket;
+            var url= "ws://"+document.location.host+"/EchoServer/echo";
+            function conectar(){
+                var url= "ws://"+document.location.host+"/EchoServer/echo";
+                webSocket = new WebSocket(url);
+                
+                webSocket.onopen= function(event){
+                  onOpen(event);
+                };
+               webSocket.onerror=function(event){
+                  onError(event);
+               };
+               webSocket.onclose = function(event){
+                   onClose(event);
+               };
+               webSocket.onmessage = function(event){
+                   onMessage(event);
+               };
+               
+            }
+            
+            function enviar(){
+                var msg = entrada.value;
+                webSocket.send(msg);
+                entrada.value="";
+                
+            }
+            
+            function desconectar(){
+                webSocket.close();
+            }
+            
+            
+            
+            function onOpen(event){
+                write("Conectado...");
+                
+            }
+            
+            function onError(event){
+                write("erro : "+event.data);
+            }
+            
+            function onClose(event){
+                write("desconectado...");
+            }
+            
+            function onMessage(event){
+                write(event.data);
+            }
+            
+            function write(msg){
+                saida.innerHTML+=msg+"<br>";
+            }
+        </script>
+        
+     </body>
+</html>
